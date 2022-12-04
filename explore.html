@@ -1,0 +1,56 @@
+<html>
+   <head><title>Quantify</title></head>
+   <link rel="stylesheet" href="explore.css">
+   <h4 class="message"><a href="index.html">Logout</a></h4>
+   <body>
+      <h1 class="title"><a href="explore.html">Quantify</a></h1>
+      <h3 class="description">Select a company to explore</h3>
+      <ul class="companies">
+         <li><a href="companies/aapl.html">Apple, Inc. (AAPL)</a></li>
+         <li><a href="companies/bx.html">Blackstone, Inc. (BX)</a></li>
+         <li><a href="companies/mcd.html">McDonald's Corporation (MCD)</a></li>
+         <li><a href="companies/nke.html">Nike, Inc. (NKE)</a></li>
+         <li><a href="companies/stt.html">State Street Corporation (STT)</a></li>
+         <li><a href="companies/sbux.html">Starbucks Corporation (SBUX)</a></li>
+         <li><a href="companies/uss.html">United States Steel Corporation (USS)</a></li>
+      </ul>
+
+      <div class="functions">
+         <div class="mm">
+            <p>Find Min and Max Stock Value (12/2017 - 11/2022)</p>
+            <div class="form">
+               <form action="mm.cgi" method="POST">
+                  <input class="ticker" type="text" name="ticker" placeholder="Company Ticker Symbol">
+                  <div class="date1">
+                     <input class="field" type="text" name="month1" placeholder="Start Month (MM)">
+                     <input class="field" type="text" name="year1" placeholder="Start Year (YYYY)"> 
+                  </div>
+                  <div class="date2">
+                     <input class="field" type="text" name="month2" placeholder="End Month (MM)">
+                     <input class="field" type="text" name="year2" placeholder="End Year (YYYY)">
+                  </div>
+                  <button class="btn" type="submit" name="submit" value="Submit">Submit</button>
+               </form>
+            </div>
+         </div>
+
+         <div class="rr">
+            <p>Find Average Return Rate (12/2017 - 11/2022)</p>
+            <div class="form">
+               <form action="rr.cgi" method="POST">
+                  <input class="ticker" type="text" name="ticker" placeholder="Company Ticker Symbol">
+                  <div class="date1">
+                     <input class="field" type="text" name="month1" placeholder="Start Month (MM)">
+                     <input class="field" type="text" name="year1" placeholder="Start Year (YYYY)"> 
+                  </div>
+                  <div class="date2">
+                     <input class="field" type="text" name="month2" placeholder="End Month (MM)">
+                     <input class="field" type="text" name="year2" placeholder="End Year (YYYY)">
+                  </div>
+                  <button class="btn" type="submit" name="submit" value="Submit">Submit</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

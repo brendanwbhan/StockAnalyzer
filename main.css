@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+h1.title {
+    margin-top: 150px;
+    color: #ffffff;
+    font-size: 80px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:link, a:visited {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: auto;
+}
+
+h3.description {
+    padding-top: 15px;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3.exploreStks {
+    padding-top: 15px;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3.explorestks:hover {
+    font-size: 35px;
+    transition: 0.5s;
+}
+
+h4.message {
+    padding-top: 50px;
+    padding-left: 50px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+h4.errormsg {
+    padding-top: 15px;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h4.tryagain {
+    padding-top: 15px;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h4.tryagain:hover {
+    font-size: 35px;
+    transition: 0.5s;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+  
+.buttons li {
+    list-style: none;
+    padding: 20px;
+}
+  
+.buttons li a{
+    text-align: left;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+  
+.buttons li a:hover{
+    font-size: 25px;
+    transition: 0.5s;
+}

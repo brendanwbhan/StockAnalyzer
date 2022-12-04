@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+h1.title {
+    margin-top: 150px;
+    color: #ffffff;
+    font-size: 80px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:link, a:visited {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: auto;
+}
+
+h3.description {
+    padding-top: 5px;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h4.message {
+    padding-top: 50px;
+    padding-left: 50px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.companies {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.companies li {
+    text-align: left;
+    list-style: none;
+}
+
+.companies li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+.companies li a:hover{
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.functions {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.mm{
+    text-align: center;
+    position: relative;
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mm p {
+    padding: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.rr{
+    text-align: center;
+    position: relative;
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.rr p {
+    padding: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.ticker {
+    width: 400px;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid #FFFFFF;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: 0.3s;
+}
+
+.field{
+    width: 200px;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid #FFFFFF;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: 0.3s;
+}
+
+::placeholder{
+    font-family: 'Playfair Display', serif;
+}
+
+.btn{
+    width: 300px;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+}
+
+button{
+    font-family: 'Playfair Display', serif;
+}
+
+.btn:hover{
+    font-size: 25px;
+    transition: 0.5s;
+}

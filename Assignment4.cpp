@@ -15,9 +15,9 @@ int main(int argc, char* argv[]) {
 
     map<string,string> Get;
     initializePost(Get);
-    cout << "Content-type: text/html" << endl << endl;
-    cout << "<html><body>" << endl;
-    cout << "<h2>Form processed...here is what we got</h2>" << endl;
+    cout << "Content-type: text/html" << endl << endl; // important
+    cout << "<html><head><title>Quantify</title></head>" << endl;
+    cout << "<link rel=\"stylesheet\"href=\"main.css\">" << endl;
 
     std::string username;
     std::string password;
@@ -29,10 +29,23 @@ int main(int argc, char* argv[]) {
     std::string state;
     std::string zipcode;
     std::string country;
+    bool loggedIn;
     
-    if (Get.find("username")!=Get.end() && 
+    if (
+    Get["username"] != "" &&
+    Get["password"] != "" &&
+    Get["firstname"] != "" &&
+    Get["lastname"] != "" &&
+    Get["email"] != "" &&
+    Get["street"] != "" &&
+    Get["city"] != "" &&
+    Get["state"] != "" &&
+    Get["zipcode"] != "" &&
+    Get["country"] != "") 
+    {
+        if (Get.find("username")!=Get.end() && 
         Get.find("password")!=Get.end() &&
-        Get.find("firstname")!=Get.end() && 
+        Get.find("firstname")!=Get.end() &&
         Get.find("lastname")!=Get.end() &&
         Get.find("email")!=Get.end() &&
         Get.find("street")!=Get.end() &&
@@ -41,20 +54,30 @@ int main(int argc, char* argv[]) {
         Get.find("zipcode")!=Get.end() &&
         Get.find("country")!=Get.end()) 
         {
-        cout << "<p>You entered, username: "<< Get["username"]<<" and password: "<< Get["password"] << endl;
-
-        username = Get["username"];
-        password = Get["password"];
-        firstname = Get["firstname"];
-        lastname = Get["lastname"];
-        email = Get["email"];
-        street = Get["street"];
-        city = Get["city"];
-        state = Get["state"];
-        zipcode = Get["zipcode"];
-        country = Get["country"];
+            std::string message = "Welcome " + Get["username"] + "!";
+            cout << "<h4 class=\"message\">" + message + "</h4>";
+            
+            cout << "<body><h1 class=\"title\">Quantify</h1>" << endl;
+            cout << "<h3 class=\"exploreStks\"><a href=\"explore.html\">Explore Stocks</a></h3>" << endl;
+            username = Get["username"];
+            password = Get["password"];
+            firstname = Get["firstname"];
+            lastname = Get["lastname"];
+            email = Get["email"];
+            street = Get["street"];
+            city = Get["city"];
+            state = Get["state"];
+            zipcode = Get["zipcode"];
+            country = Get["country"];
+        } else {
+            cout << "<body><h1 class=\"title\">Quantify</h1>" << endl;
+            cout << "<h4 class=\"errormsg\">Form not filled</h4>"<<endl;
+            cout << "<h4 class=\"tryagain\"><a href=\"createAcc.html\">Try Again</a></h4>" << endl;
+        }
     } else {
-        cout << "<p>Fill out the from and press submit"<<endl;
+        cout << "<body><h1 class=\"title\">Quantify</h1>" << endl;
+        cout << "<h4 class=\"errormsg\">Form not filled</h4>"<<endl;
+        cout << "<h4 class=\"tryagain\"><a href=\"createAcc.html\">Try Again</a></h4>" << endl;
     }
     cout << "</body></html>" << endl;
 
@@ -78,7 +101,7 @@ int main(int argc, char* argv[]) {
 
         // Always check for errors
         if(result) {
-            cout <<"<p>Query success...\n";
+            cout << "" << endl;
         } else {
             cerr << "Query error: " << query.error() << endl;
         }
